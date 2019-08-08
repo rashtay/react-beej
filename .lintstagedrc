@@ -2,7 +2,7 @@
   "*.{js,jsx}": [
     "prettier --write",
     "eslint --fix",
-    "stylelint src/*.css --fix",
+    "stylelint --syntax=css --fix",
     "git add ."
   ]
 }
