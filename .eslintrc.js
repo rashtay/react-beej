@@ -15,6 +15,8 @@ module.exports = {
     'prettier',
     'prettier/flowtype',
     'prettier/react',
+    'plugin:import/errors',
+    'plugin:import/warnings',
   ],
 
   globals: {
@@ -28,7 +30,7 @@ module.exports = {
     jest: true,
   },
 
-  plugins: ['import', 'react', 'flowtype', 'prettier'],
+  plugins: ['react', 'flowtype', 'prettier'],
 
   rules: {
     // es6
@@ -110,7 +112,8 @@ module.exports = {
 
   settings: {
     'import/resolver': {
-      'babel-module': {
+      node: {
+        moduleDirectory: ['node_modules', 'src/'],
         extensions: ['.js', '.jsx'],
       },
     },
