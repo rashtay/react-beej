@@ -1,0 +1,39 @@
+[ignore]
+.*/node_modules/enzyme-matchers/*
+.*/node_modules/fbemitter/node_modules/*
+.*/node_modules/fbjs/*
+.*/node_modules/flux/*
+.*/node_modules/jasmine-enzyme/*
+.*/node_modules/react-event-listener/*
+.*/node_modules/react-motion/*
+.*/node_modules/react-universal-component/*
+
+[include]
+
+[libs]
+flow-typed
+
+[lints]
+
+[options]
+emoji=true
+
+module.file_ext=.js
+module.file_ext=.jsx
+module.file_ext=.json
+module.file_ext=.css
+module.file_ext=.scss
+module.file_ext=.pcss
+module.name_mapper.extension='css' -> 'empty/object'
+module.name_mapper.extension='scss' -> 'empty/object'
+module.name_mapper.extension='pcss' -> 'empty/object'
+module.name_mapper='.+\(.s?css\)' -> 'CSSModule'
+module.name_mapper='src' -> '<PROJECT_ROOT>/src'
+
+suppress_type=$FlowIssue
+suppress_type=$FlowFixMe
+suppress_type=$FlowFixMeProps
+suppress_type=$FlowFixMeState
+suppress_type=$FixMe
+
+module.ignore_non_literal_requires=true
