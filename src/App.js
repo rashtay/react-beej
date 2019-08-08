@@ -1,7 +1,10 @@
+// @flow
 import React from 'react';
 import logo from 'logo.svg';
 import Test from 'Test/';
 import 'style/App.css';
+
+const getName = (name: string) => name;
 
 function App() {
   return (
@@ -19,8 +22,7 @@ function App() {
         >
           Learn React
         </a>
-
-        <Test />
+        <Test /> {getName('Rahul')}
       </header>
     </div>
   );

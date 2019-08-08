@@ -28,7 +28,9 @@ module.name_mapper.extension='css' -> 'empty/object'
 module.name_mapper.extension='scss' -> 'empty/object'
 module.name_mapper.extension='pcss' -> 'empty/object'
 module.name_mapper='.+\(.s?css\)' -> 'CSSModule'
-module.name_mapper='src' -> '<PROJECT_ROOT>/src'
+module.system.node.resolve_dirname=node_modules
+module.system.node.resolve_dirname=src
+# module.name_mapper='src' -> '<PROJECT_ROOT>/src'
 
 suppress_type=$FlowIssue
 suppress_type=$FlowFixMe
