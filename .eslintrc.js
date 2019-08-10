@@ -1,3 +1,5 @@
+const ERROR = 2;
+
 module.exports = {
   parser: 'babel-eslint',
 
@@ -34,9 +36,8 @@ module.exports = {
 
   rules: {
     // es6
-    'func-names': [2, 'never'],
-    'no-await-in-loop': 2,
-    'no-magic-numbers': 2,
+    'func-names': [ERROR, 'never'],
+    'no-await-in-loop': ERROR,
     'padding-line-between-statements': [
       'error',
       { blankLine: 'always', prev: '*', next: 'return' },
@@ -55,13 +56,13 @@ module.exports = {
       { blankLine: 'always', prev: 'block-like', next: 'block-like' },
     ],
     'lines-around-comment': [
-      2,
+      ERROR,
       {
         beforeBlockComment: true,
       },
     ],
     'class-methods-use-this': 0,
-    'no-console': ['error', { allow: ['warn', 'info', 'table'] }],
+    'no-console': ['error', { allow: ['warn', 'info', 'error'] }],
     'no-underscore-dangle': 0,
     // See https://github.com/babel/babel-eslint/issues/278
     // and https://github.com/eslint/eslint/pull/7436
@@ -69,7 +70,14 @@ module.exports = {
     'prefer-destructuring': 0,
     quotes: ['error', 'single', 'avoid-escape'],
     camelcase: 0,
-    'no-magic-numbers': 0,
+    'no-magic-numbers': [
+      'error',
+      {
+        enforceConst: true,
+        ignoreArrayIndexes: true,
+        ignore: [1, -1],
+      },
+    ],
     'no-restricted-globals': 0,
 
     // imports
@@ -77,10 +85,10 @@ module.exports = {
     'import/prefer-default-export': 0,
 
     // spacing
-    'no-multiple-empty-lines': [2, { max: 1, maxEOF: 0, maxBOF: 0 }],
+    'no-multiple-empty-lines': [ERROR, { max: 1, maxEOF: 0, maxBOF: 0 }],
 
     // code arrangement matters
-    'no-use-before-define': [2, { functions: false }],
+    'no-use-before-define': [ERROR, { functions: false }],
 
     // make it meaningful
     'prefer-const': 1,
@@ -97,7 +105,7 @@ module.exports = {
     'react/destructuring-assignment': 0,
     'react/jsx-filename-extension': 0,
     'react/sort-comp': [
-      2,
+      ERROR,
       {
         order: [
           'type-annotations',
