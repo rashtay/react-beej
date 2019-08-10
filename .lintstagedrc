@@ -1,7 +1,7 @@
 {
   "*.{js,jsx}": [
     "prettier --write",
-    "eslint --fix --ignore-pattern '!.eslintrc.js'",
+    "eslint --fix",
     "git add ."
   ],
   "*.css": [
