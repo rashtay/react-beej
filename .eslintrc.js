@@ -75,7 +75,7 @@ module.exports = {
       {
         enforceConst: true,
         ignoreArrayIndexes: true,
-        ignore: [1, -1],
+        ignore: [0, 1, -1],
       },
     ],
     'no-restricted-globals': 0,
