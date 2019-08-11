@@ -6,12 +6,10 @@
  * @flow
  */
 import { combineReducers } from 'redux';
-import user from './user';
-import article from './article';
+import todo from './todo';
 
 const rootReducer = combineReducers({
-  user,
-  article,
+  todo,
 });
 
 export default rootReducer;

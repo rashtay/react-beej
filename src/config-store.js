@@ -19,7 +19,7 @@ const APP_VERSION = process.env.REACT_APP_VERSION || 0;
 
 const persistConfig = {
   key: 'root',
-  version: APP_VERSION,
+  version: parseInt(APP_VERSION, 10),
   storage,
   stateReconciler: autoMergeLevel2,
   // blacklist: [],
