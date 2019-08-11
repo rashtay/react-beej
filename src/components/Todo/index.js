@@ -3,7 +3,7 @@ import React from 'react';
 import logo from 'assets/images/svg/logo.svg';
 import 'styles/App.css';
 
-function Comp1() {
+function Todo() {
   return (
     <div className="App">
       <header className="App-header">
@@ -24,4 +24,4 @@ function Comp1() {
   );
 }
 
-export default Comp1;
+export default Todo;

@@ -1,8 +1,8 @@
 // @flow
 // import { connect } from 'react-redux';
-import { Comp2 } from 'components/';
+import { Todo } from 'components/';
 
-export default Comp2;
+export default Todo;
 // export default connect(
 //   null,
 //   {}

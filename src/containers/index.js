@@ -18,4 +18,7 @@
  * Whenever you create a common component, make sure you export it from index.js
  * @flow
  */
-export { default as Comp1 } from './Comp1';
+export { default as Todo } from './Todo';
+export { default as About } from './About';
+export { default as Contact } from './Contact';
+export { default as NotFound } from './NotFound';

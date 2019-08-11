@@ -1,8 +1,8 @@
 // @flow
 // import { connect } from 'react-redux';
-import { Comp1 } from 'components/';
+import { About } from 'components/';
 
-export default Comp1;
+export default About;
 // export default connect(
 //   null,
 //   {}
