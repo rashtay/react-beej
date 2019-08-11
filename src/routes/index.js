@@ -1,16 +1,16 @@
 // @flow
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { AsyncImport } from 'components/';
+import asyncImport from './async-import';
 
 const Routes = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path="/" component={AsyncImport('Comp1')} />
-        <Route path="/about" component={AsyncImport('Comp2')} />
-        <Route path="/contact" component={AsyncImport('Comp3')} />
-        <Route component={AsyncImport('NotFound')} />
+        <Route exact path="/" component={asyncImport('Comp1')} />
+        <Route path="/about" component={asyncImport('Comp2')} />
+        <Route path="/contact" component={asyncImport('Comp3')} />
+        <Route component={asyncImport('NotFound')} />
       </Switch>
     </BrowserRouter>
   );
