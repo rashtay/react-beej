@@ -38,9 +38,6 @@
     "eject": "react-scripts eject",
     "lint-style": "stylelint src/*.css --fix"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
   "browserslist": {
     "production": [
       ">0.2%",

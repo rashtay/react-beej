@@ -7,22 +7,22 @@
  */
 import { TODO } from 'action-type';
 
-const defaultState = {
+const defaultState: Todo = {
   todoList: [],
 };
 
-export default function todo(state: Object = defaultState, action: Object) {
+export default function todo(state: Todo = defaultState, action: Action): Todo {
   const { todoList } = state;
-  const { payload } = state;
+  const { payload, type } = action;
 
-  switch (action.type) {
+  switch (type) {
     case TODO.ADD_TODO:
       return {
-        todoList: [...todoList, payload],
+        todoList: [...todoList, { name: payload, index: Date.now() }],
       };
     case TODO.DELETE_TODO:
       return {
-        todoList: todoList.splice(todoList.indexOf(payload)),
+        todoList: todoList.filter(item => item.name !== payload),
       };
     default:
       return state;

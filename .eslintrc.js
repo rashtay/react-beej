@@ -46,12 +46,6 @@ module.exports = {
       { blankLine: 'always', prev: 'directive', next: '*' },
       { blankLine: 'always', prev: '*', next: 'function' },
       { blankLine: 'any', prev: 'directive', next: 'directive' },
-      { blankLine: 'always', prev: ['const', 'let', 'var'], next: '*' },
-      {
-        blankLine: 'any',
-        prev: ['const', 'let', 'var'],
-        next: ['const', 'let', 'var'],
-      },
       { blankLine: 'always', prev: 'block', next: 'block' },
       { blankLine: 'always', prev: 'block-like', next: 'block-like' },
     ],
@@ -96,6 +90,9 @@ module.exports = {
     // keep it simple
     complexity: 0,
 
+    // Flow will handle this
+    'no-unused-expressions': 'off',
+
     // prettier
     'prettier/prettier': ['error'],
 
@@ -116,6 +113,9 @@ module.exports = {
         ],
       },
     ],
+
+    // Flow
+    'flowtype/no-unused-expressions': 'error',
   },
 
   settings: {
@@ -124,6 +124,9 @@ module.exports = {
         moduleDirectory: ['node_modules', 'src/'],
         extensions: ['.js', '.jsx'],
       },
+    },
+    flowtype: {
+      onlyFilesWithFlowAnnotation: true,
     },
   },
 };
