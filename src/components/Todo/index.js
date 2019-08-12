@@ -1,18 +1,16 @@
 // @flow
 import React from 'react';
 import logo from 'assets/images/svg/logo.svg';
-import 'styles/App.css';
+import styles from './style.module.css';
 
 function Todo() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+    <div className={styles.container}>
+      <header className={styles.appHeader}>
+        <img src={logo} className={styles.appLogo} alt="logo" />
+
         <a
-          className="App-link"
+          className={styles.appLink}
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
@@ -20,6 +18,10 @@ function Todo() {
           Learn React
         </a>
       </header>
+
+      <main>
+        <input type="text" placeholder="Add tasks" />
+      </main>
     </div>
   );
 }
