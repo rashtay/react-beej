@@ -11,16 +11,10 @@ import { createSelector } from 'reselect';
 const friends = state => state.user.details.friends;
 
 // Base selector to get the activeIndex from friends
-const getActiveIndex = createSelector(
-  friends,
-  _ => _.activeIndex
-);
+const getActiveIndex = createSelector(friends, _ => _.activeIndex);
 
 // Base selector to get the data from friends
-const getData = createSelector(
-  friends,
-  _ => _.data
-);
+const getData = createSelector(friends, _ => _.data);
 
 // Compose base selectors to get activeFriend
 export const getActiveFriend = createSelector(
