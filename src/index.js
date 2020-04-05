@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/lib/integration/react';
-import storeOptions from 'config-store';
+import storeOptions from 'store/config-store';
 import Routes from 'routes/';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
