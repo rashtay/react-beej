@@ -40,7 +40,6 @@ Below, I have listed the tools and libraries with official documentation integra
 - [Flow: Typechecker](https://flow.org/)
 - [Jest](https://jestjs.io/)
 - [Enzyme](https://enzymejs.github.io/enzyme/)
-- [Reactotron](https://github.com/infinitered/reactotron)
 
 ## Available Scripts
 
