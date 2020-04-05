@@ -1,0 +1,121 @@
+{
+  "parser": "babel-eslint",
+
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true
+    }
+  },
+
+  "extends": [
+    "react-app",
+    "airbnb",
+    "plugin:flowtype/recommended",
+    "plugin:react/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "prettier",
+    "prettier/flowtype",
+    "prettier/react"
+  ],
+
+  "plugins": ["react", "react-hooks", "flowtype", "prettier"],
+
+  "globals": {
+    "findByTestAttr": true,
+    "shallow": true,
+    "useTestId": true
+  },
+
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "jest": true
+  },
+
+  "rules": {
+    "func-names": [2, "never"],
+    "no-await-in-loop": 2,
+    "padding-line-between-statements": [
+      "error",
+      { "blankLine": "always", "prev": "*", "next": "return" },
+      { "blankLine": "always", "prev": "*", "next": "break" },
+      { "blankLine": "always", "prev": "*", "next": "continue" },
+      { "blankLine": "always", "prev": "directive", "next": "*" },
+      { "blankLine": "always", "prev": "*", "next": "function" },
+      { "blankLine": "always", "prev": "*", "next": "block" }
+    ],
+    "lines-around-comment": [
+      2,
+      {
+        "beforeBlockComment": true
+      }
+    ],
+    "class-methods-use-this": 0,
+    "no-console": ["error", { "allow": ["warn", "info", "error"] }],
+    "no-underscore-dangle": 0,
+    "arrow-parens": 0,
+    "prefer-destructuring": 0,
+    "quotes": ["error", "single", "avoid-escape"],
+    "camelcase": 0,
+    "no-magic-numbers": [
+      "error",
+      {
+        "enforceConst": true,
+        "ignoreArrayIndexes": true,
+        "ignore": [0, 1, -1, 2]
+      }
+    ],
+    "no-restricted-globals": 0,
+
+    "import/no-extraneous-dependencies": 0,
+    "import/prefer-default-export": 0,
+
+    "no-multiple-empty-lines": [2, { "max": 1, "maxEOF": 0, "maxBOF": 0 }],
+
+    "no-use-before-define": [2, { "functions": false }],
+
+    "prefer-const": 1,
+
+    "complexity": 0,
+
+    "no-unused-expressions": "off",
+
+    "prettier/prettier": ["error"],
+
+    "react/prefer-es6-class": 0,
+    "react/destructuring-assignment": 0,
+    "react/jsx-filename-extension": 0,
+    "react/jsx-props-no-spreading": 0,
+    "react/sort-comp": [
+      2,
+      {
+        "order": [
+          "type-annotations",
+          "static-methods",
+          "lifecycle",
+          "everything-else",
+          "render"
+        ]
+      }
+    ],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+
+    "flowtype/no-unused-expressions": "error"
+  },
+
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "moduleDirectory": ["node_modules", "src/"],
+        "extensions": [".js", ".jsx"]
+      }
+    },
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": true
+    }
+  }
+}
