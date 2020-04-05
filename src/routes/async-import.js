@@ -18,7 +18,7 @@ const Loader = ({ isLoading, error, retry }: LoadingProps) => {
   if (error) {
     return (
       <div>
-        Sorry, there was a problem loading the page.{' '}
+        There seems to be a problem loading the page.{' '}
         <button type="button" onClick={retry}>
           Retry
         </button>

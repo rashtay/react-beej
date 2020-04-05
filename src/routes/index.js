@@ -9,7 +9,6 @@ const Routes = () => {
       <Switch>
         <Route exact path="/" component={asyncImport('Todo')} />
         <Route path="/about" component={asyncImport('About')} />
-        <Route path="/contact" component={asyncImport('Contact')} />
         <Route component={asyncImport('NotFound')} />
       </Switch>
     </BrowserRouter>

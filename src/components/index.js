@@ -15,9 +15,8 @@
  *
  * e.g export { default as BackButton } from './back-button';
  *
- * Whenever you create a common component, make sure you export it from index.js
+ * Whenever you create a component for the "CONTAINER", make sure you export it from index.js
  * @flow
  */
 export { default as Todo } from './Todo';
 export { default as About } from './About';
-export { default as Contact } from './Contact';

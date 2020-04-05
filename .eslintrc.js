@@ -23,7 +23,11 @@ module.exports = {
 
   plugins: ['react', 'react-hooks', 'flowtype', 'prettier'],
 
-  globals: {},
+  globals: {
+    findByTestAttr: true,
+    shallow: true,
+    useTestId: true,
+  },
 
   env: {
     browser: true,
