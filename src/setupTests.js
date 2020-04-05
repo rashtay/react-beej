@@ -3,16 +3,11 @@
 // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom/extend-expect';
-import { configure, shallow } from 'enzyme';
+import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
+import './constants/global';
 
 configure({ adapter: new Adapter() });
-
-global.useTestId = (id) => {
-  if (process.env.NODE_ENV === 'test') return { 'data-test': id };
-
-  return {};
-};
 
 /**
  * Return ShallowWrapper containing node(s) with the given data-test value
@@ -25,5 +20,3 @@ global.useTestId = (id) => {
 global.findByTestAttr = (wrapper, val) => {
   return wrapper.find(`[data-test='${val}']`);
 };
-
-global.shallow = shallow;

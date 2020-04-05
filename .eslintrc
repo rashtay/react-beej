@@ -24,7 +24,6 @@
 
   "globals": {
     "findByTestAttr": true,
-    "shallow": true,
     "useTestId": true
   },
 
