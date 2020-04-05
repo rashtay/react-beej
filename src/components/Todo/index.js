@@ -4,7 +4,7 @@ import Input from 'components/Input';
 import logo from 'assets/images/svg/logo.svg';
 import styles from './style.module.css';
 
-type TodoMethod = string => void;
+type TodoMethod = (string) => void;
 
 type TodoProps = {
   todoList: TodoList,

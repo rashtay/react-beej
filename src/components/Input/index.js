@@ -11,7 +11,7 @@ function UseSetTaskName(initialValue: string = '', callback: Function) {
 
   const handleChange = (e: Object) => setValue(e.target.value);
 
-  const handleKeyDown = e => {
+  const handleKeyDown = (e) => {
     if (e.key === 'Enter') {
       if (value) {
         callback(value);
@@ -30,6 +30,7 @@ function UseSetTaskName(initialValue: string = '', callback: Function) {
 function Input({ onEnter }: Props) {
   const taskName = UseSetTaskName('', onEnter);
 
+  // eslint-disable-next-line react/jsx-props-no-spreading
   return <input type="text" placeholder="Add Tasks" {...taskName} />;
 }
 

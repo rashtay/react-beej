@@ -3,7 +3,3 @@
 import { About } from 'components/';
 
 export default About;
-// export default connect(
-//   null,
-//   {}
-// )(Comp1);

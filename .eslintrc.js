@@ -14,15 +14,16 @@ module.exports = {
     'airbnb',
     'plugin:flowtype/recommended',
     'plugin:react/recommended',
+    'plugin:import/errors',
+    'plugin:import/warnings',
     'prettier',
     'prettier/flowtype',
     'prettier/react',
-    'plugin:import/errors',
-    'plugin:import/warnings',
   ],
 
-  globals: {
-  },
+  plugins: ['react', 'react-hooks', 'flowtype', 'prettier'],
+
+  globals: {},
 
   env: {
     browser: true,
@@ -30,8 +31,6 @@ module.exports = {
     es6: true,
     jest: true,
   },
-
-  plugins: ['react', 'react-hooks', 'flowtype', 'prettier'],
 
   rules: {
     // es6
@@ -109,8 +108,8 @@ module.exports = {
         ],
       },
     ],
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
 
     // Flow
     'flowtype/no-unused-expressions': 'error',
