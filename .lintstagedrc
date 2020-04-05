@@ -2,8 +2,7 @@
   "*.{js,jsx}": [
     "flow focus-check",
     "prettier --write",
-    "eslint --fix",
-    "git add ."
+    "eslint --fix"
   ],
   "*.css": [
     "stylelint --fix"
