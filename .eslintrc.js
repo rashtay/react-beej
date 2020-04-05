@@ -100,6 +100,7 @@ module.exports = {
     'react/prefer-es6-class': 0,
     'react/destructuring-assignment': 0,
     'react/jsx-filename-extension': 0,
+    'react/jsx-props-no-spreading': 0,
     'react/sort-comp': [
       ERROR,
       {

@@ -2,9 +2,10 @@
   "*.{js,jsx}": [
     "flow focus-check",
     "prettier --write",
-    "eslint --fix"
+    "eslint --fix",
+    "npm run test:ci"
   ],
   "*.css": [
-    "stylelint --fix"
+    "stylelint src/*.css --fix"
   ]
 }
