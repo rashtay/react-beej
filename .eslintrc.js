@@ -22,7 +22,6 @@ module.exports = {
   ],
 
   globals: {
-    __DEV__: true,
   },
 
   env: {
@@ -32,7 +31,7 @@ module.exports = {
     jest: true,
   },
 
-  plugins: ['react', 'flowtype', 'prettier'],
+  plugins: ['react', 'react-hooks', 'flowtype', 'prettier'],
 
   rules: {
     // es6
@@ -45,9 +44,7 @@ module.exports = {
       { blankLine: 'always', prev: '*', next: 'continue' },
       { blankLine: 'always', prev: 'directive', next: '*' },
       { blankLine: 'always', prev: '*', next: 'function' },
-      { blankLine: 'any', prev: 'directive', next: 'directive' },
-      { blankLine: 'always', prev: 'block', next: 'block' },
-      { blankLine: 'always', prev: 'block-like', next: 'block-like' },
+      { blankLine: 'always', prev: '*', next: 'block' },
     ],
     'lines-around-comment': [
       ERROR,
@@ -69,7 +66,7 @@ module.exports = {
       {
         enforceConst: true,
         ignoreArrayIndexes: true,
-        ignore: [0, 1, -1],
+        ignore: [0, 1, -1, 2],
       },
     ],
     'no-restricted-globals': 0,
@@ -97,7 +94,6 @@ module.exports = {
     'prettier/prettier': ['error'],
 
     // react
-    'react/no-array-index-key': 0,
     'react/prefer-es6-class': 0,
     'react/destructuring-assignment': 0,
     'react/jsx-filename-extension': 0,
@@ -113,6 +109,8 @@ module.exports = {
         ],
       },
     ],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
 
     // Flow
     'flowtype/no-unused-expressions': 'error',
