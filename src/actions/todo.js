@@ -5,7 +5,7 @@
  * Actions for article related operations
  * @flow
  */
-import { TODO } from 'action-type';
+import { TODO } from 'constants/action-type';
 
 export const addTodo = (todo: string) => (dispatch: Function) =>
   dispatch({

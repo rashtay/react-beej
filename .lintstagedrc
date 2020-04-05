@@ -1,10 +1,11 @@
 {
   "*.{js,jsx}": [
+    "flow focus-check",
     "prettier --write",
     "eslint --fix",
     "git add ."
   ],
   "*.css": [
-    "stylelint --fix",
-  ],
+    "stylelint --fix"
+  ]
 }

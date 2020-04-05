@@ -5,7 +5,7 @@
  * Reducer for Article data
  * @flow
  */
-import { TODO } from 'action-type';
+import { TODO } from 'constants/action-type';
 
 const defaultState: Todo = {
   todoList: [],
