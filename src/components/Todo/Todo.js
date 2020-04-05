@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import Input from 'components/Input';
+import Input from 'components/Input/Input';
 import logo from 'assets/images/svg/logo.svg';
 import styles from './style.module.css';
 

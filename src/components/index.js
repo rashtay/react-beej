@@ -18,5 +18,6 @@
  * Whenever you create a component for the "CONTAINER", make sure you export it from index.js
  * @flow
  */
-export { default as Todo } from './Todo';
-export { default as About } from './About';
+export { default as Todo } from './Todo/Todo';
+export { default as About } from './About/About';
+export { default as NotFound } from './NotFound/NotFound';
