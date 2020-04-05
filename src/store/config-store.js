@@ -28,7 +28,7 @@ const persistConfig = {
 
 const middlewares = [thunkMiddleware];
 
-const configureStore = initialState => {
+const configureStore = (initialState) => {
   let enhancer = {};
   const persistentReducer = persistReducer(persistConfig, rootReducer);
 
@@ -52,7 +52,7 @@ const configureStore = initialState => {
     module.hot.accept(() => {
       store.replaceReducer(
         // eslint-disable-next-line global-require
-        persistReducer(persistConfig, require('../reducers/index').default)
+        persistReducer(persistConfig, require('../reducers/index').default),
       );
     });
   }

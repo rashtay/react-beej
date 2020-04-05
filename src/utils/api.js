@@ -61,7 +61,7 @@ const createEventBase = (method: HTTPVerb, event: string): string =>
  */
 const parseEndpoint = (
   endpoint: string,
-  customBaseUrl?: string = ''
+  customBaseUrl?: string = '',
 ): string => {
   const tailoredBaseURL = customBaseUrl || BASE_URL;
 
@@ -75,7 +75,8 @@ const parseEndpoint = (
  *
  * @returns {boolean}
  */
-const isJson = resp => resp.headers.get('content-type') === 'application/json';
+const isJson = (resp) =>
+  resp.headers.get('content-type') === 'application/json';
 
 /**
  * API wrapper.
@@ -89,7 +90,7 @@ const isJson = resp => resp.headers.get('content-type') === 'application/json';
 function api(
   endpoint: string,
   options: Object = {},
-  dispatch: Dispatch = (): void => {}
+  dispatch: Dispatch = (): void => {},
 ) {
   const url = parseEndpoint(endpoint, options.customBaseUrl);
   let fetchOptions: FetchOptions = {
@@ -141,7 +142,7 @@ function api(
   };
 
   // Handler for successful api calls.
-  const handleApiSuccess = response => {
+  const handleApiSuccess = (response) => {
     dispatch({
       type: `${eventBase}_SUCCESS`,
       response,
@@ -156,12 +157,9 @@ function api(
   };
 
   return fetch(finalURL, fetchOptions)
-    .then(resp => {
+    .then((resp) => {
       if (resp.ok) {
-        return resp
-          .json()
-          .then(handleApiSuccess)
-          .catch(handleApiError);
+        return resp.json().then(handleApiSuccess).catch(handleApiError);
       }
 
       if (resp.status === ERR_CODE.unauthorized) {
@@ -169,15 +167,12 @@ function api(
       }
 
       if (isJson(resp)) {
-        return resp
-          .json()
-          .then(handleApiError)
-          .catch(handleApiError);
+        return resp.json().then(handleApiError).catch(handleApiError);
       }
 
       return handleApiError(resp);
     })
-    .catch(err => {
+    .catch((err) => {
       // Network error.
       dispatch({
         type: 'NETWORK_ERROR',

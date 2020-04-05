@@ -50,12 +50,12 @@ export const format = (params: Object): string => {
   }
 
   const query = keys
-    .map(key => {
+    .map((key) => {
       const value = Array.isArray(params[key]) ? params[key] : [params[key]];
 
       return encodeSet([key, value]);
     })
-    .map(set => set.join('&'))
+    .map((set) => set.join('&'))
     .join('&');
 
   return `?${query}`;

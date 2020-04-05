@@ -22,7 +22,7 @@ export default function todo(state: Todo = defaultState, action: Action): Todo {
       };
     case TODO.DELETE_TODO:
       return {
-        todoList: todoList.filter(item => item.name !== payload),
+        todoList: todoList.filter((item) => item.name !== payload),
       };
     default:
       return state;
