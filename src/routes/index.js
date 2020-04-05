@@ -1,16 +1,19 @@
 // @flow
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import asyncImport from './async-import';
+
+const AsyncImport = (path: string) => lazy(() => import(`containers/${path}`));
 
 const Routes = () => {
   return (
     <BrowserRouter>
-      <Switch>
-        <Route exact path="/" component={asyncImport('Todo')} />
-        <Route path="/about" component={asyncImport('About')} />
-        <Route component={asyncImport('NotFound')} />
-      </Switch>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Switch>
+          <Route exact path="/" component={AsyncImport('Todo')} />
+          <Route path="/about" component={AsyncImport('About')} />
+          <Route component={AsyncImport('NotFound')} />
+        </Switch>
+      </Suspense>
     </BrowserRouter>
   );
 };
