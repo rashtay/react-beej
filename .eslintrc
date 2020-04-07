@@ -82,7 +82,12 @@
 
     "no-unused-expressions": "off",
 
-    "prettier/prettier": ["error"],
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
 
     "react/prefer-es6-class": 0,
     "react/destructuring-assignment": 0,

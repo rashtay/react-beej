@@ -1,0 +1,155 @@
+module.exports = [
+  {
+    folderName: 'Direct Messages',
+    ref: 'group-1',
+    groups: [],
+    iconColour: '#333333',
+  },
+  {
+    folderName: 'Unified Inbox',
+    ref: 'group-2',
+    groups: [],
+    iconColour: '#333333',
+  },
+  {
+    folderName: 'CO Project',
+    ref: 'group-1',
+    groups: [],
+    iconColour: '#039F45',
+  },
+  {
+    folderName: 'Soylent Design Te...',
+    ref: 'group-1',
+    groups: [
+      {
+        folderName: 'Design Sprint 3',
+        ref: 'group-1',
+        groups: [],
+        iconColour: '',
+      },
+      {
+        folderName: 'Developer Hand-Off',
+        ref: 'group-1',
+        groups: [],
+        iconColour: '',
+      },
+      {
+        folderName: 'Feature Requests',
+        ref: 'group-1',
+        groups: [],
+        iconColour: '',
+      },
+      {
+        folderName: 'Hangout',
+        ref: 'group-1',
+        groups: [],
+        iconColour: '',
+      },
+      {
+        folderName: 'Archives',
+        ref: 'group-1',
+        groups: [],
+        iconColour: '',
+      },
+    ],
+    iconColour: '#FFFFFF',
+  },
+  {
+    folderName: 'Travata Dev Team',
+    ref: 'group-1',
+    groups: [
+      {
+        folderName: 'Design Sprint 3',
+        ref: 'group-1',
+        groups: [],
+        iconColour: '',
+      },
+      {
+        folderName: 'Developer Hand-Off',
+        ref: 'group-1',
+        groups: [],
+        iconColour: '',
+      },
+      {
+        folderName: 'Feature Requests',
+        ref: 'group-1',
+        groups: [],
+        iconColour: '',
+      },
+      {
+        folderName: 'Hangout',
+        ref: 'group-1',
+        groups: [],
+        iconColour: '',
+      },
+      {
+        folderName: 'Archives',
+        ref: 'group-1',
+        groups: [],
+        iconColour: '',
+      },
+    ],
+    iconColour: '#FFFFFF',
+  },
+  {
+    folderName: 'Archives',
+    ref: 'group-1',
+    groups: [
+      {
+        folderName: 'Design Sprint 3',
+        ref: 'group-1',
+        groups: [],
+        iconColour: '',
+      },
+      {
+        folderName: 'Developer Hand-Off',
+        ref: 'group-1',
+        groups: [],
+        iconColour: '',
+      },
+      {
+        folderName: 'Feature Requests',
+        ref: 'group-1',
+        groups: [],
+        iconColour: '',
+      },
+      {
+        folderName: 'Hangout',
+        ref: 'group-1',
+        groups: [],
+        iconColour: '',
+      },
+      {
+        folderName: 'Archives',
+        ref: 'group-1',
+        groups: [],
+        iconColour: '',
+      },
+    ],
+    iconColour: '#FFFFFF',
+  },
+  {
+    folderName: 'Start-Up Foundry',
+    ref: 'group-1',
+    groups: [],
+    iconColour: '#FF7800',
+  },
+  {
+    folderName: 'Weekend News',
+    ref: 'group-1',
+    groups: [],
+    iconColour: '#333333',
+  },
+  {
+    folderName: 'Business Scene',
+    ref: 'group-1',
+    groups: [],
+    iconColour: '#315EFF',
+  },
+  {
+    folderName: 'Paid Channels',
+    ref: 'group-1',
+    groups: [],
+    iconColour: '#FF9900',
+  },
+];

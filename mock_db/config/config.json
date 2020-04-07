@@ -1,0 +1,9 @@
+{
+  "port": 5000,
+  "routes": "./mock_db/config/router.json",
+  "middlewares": [
+    "./mock_db/middlewares/_postAsGet.js",
+    "./mock_db/middlewares/_putAsGet.js",
+    "./mock_db/middlewares/_deleteAsGet.js"
+  ]
+}
